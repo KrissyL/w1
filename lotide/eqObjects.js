@@ -1,23 +1,23 @@
 const assertEqual = function(actual, expected) {
-    if (actual === expected) {
-      console.log(`✔️ Assertion Passed: ${actual} === ${expected}`);
-    } else if (actual !== expected) {
-      console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-    }
-  };
+  if (actual === expected) {
+    console.log(`✔️ Assertion Passed: ${actual} === ${expected}`);
+  } else if (actual !== expected) {
+    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
 
-  const eqObjects = function(object1, object2) {
-      if (Object.keys(object1).length !== Object.keys(object2).length) {
-          return false;
+const eqObjects = function(object1, object2) {
+  if (Object.keys(object1).length !== Object.keys(object2).length) {
+    return false;
+  } else {
+    for (const prop in object1) {
+      if (object1[prop] === object2[prop]) {
+        return true;
       } else {
-          for (const prop in object1) {
-              if (object1[prop] === object2[prop]) {
-                  return true;
-              } else {
-                  return false;
-              }
-          }
+        return false;
       }
+    }
+  }
 };
 
 const ab = { a: "1", b: "2" };
