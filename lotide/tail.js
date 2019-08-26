@@ -4,4 +4,4 @@ const tail = function(arr) {
   return arr.slice(1);
 };
 
-modole.exports = tail;
+module.exports = tail;
