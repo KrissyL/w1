@@ -1,11 +1,8 @@
-const isEven = function(num) {
-  return num % 2 === 0;
-};
 const middle = function(array) {
   let arrResult = [];
   const halfArray = array.length / 2;
   if (array.length > 2) {
-    if (isEven(array.length)) {
+    if (array.length % 2 === 0) {
       arrResult.push(array[halfArray - 1]);
       arrResult.push(array[halfArray]);
     } else {
